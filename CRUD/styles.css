@@ -1,0 +1,141 @@
+:root{
+  --bg:#223229;
+  --paper:#f3ebda;
+  --ink:#2a2420;
+  --red:#b14a3a;
+  --redd:#8f382a;
+  --alta:#b14a3a;
+  --media:#c98f2a;
+  --baja:#4a7a63
+}
+
+*{
+  box-sizing:border-box
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--paper);
+  font-family:monospace;
+  padding-bottom:2rem
+}
+
+.board-header{
+  text-align:center;
+  padding:2rem
+}
+
+.board-header h1{
+  font-family:Georgia,serif
+}
+
+main{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 1rem
+}
+
+.new-card-slip{
+  background:var(--paper);
+  color:var(--ink);
+  border-radius:4px;
+  padding:1rem;
+  margin-bottom:2rem
+}
+
+#card-form{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr auto;
+  gap:0.8rem;
+  align-items:end
+}
+
+.field{
+  display:flex;
+  flex-direction:column
+}
+
+.field input,.field select{
+  padding:0.5rem;
+  border:1px solid #ccc;
+  border-radius:4px
+}
+
+.pin-button{
+  background:var(--red);
+  color:#fff;
+  border:none;
+  padding:0.6rem 1rem;
+  border-radius:4px;
+  cursor:pointer
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:1rem
+}
+
+.empty-note{
+  grid-column:1/-1;
+  text-align:center;
+  font-style:italic
+}
+
+.card{
+  background:var(--paper);
+  color:var(--ink);
+  border-radius:4px;
+  padding:1rem
+}
+
+.card .materia{
+  font-weight:bold;
+  margin:0
+}
+
+.card .tema{
+  color:#666;
+  font-size:0.9rem
+}
+
+.badge{
+  display:inline-block;
+  font-size:0.65rem;
+  color:#fff;
+  padding:0.2rem 0.5rem;
+  border-radius:999px;
+  margin-bottom:0.5rem
+}
+
+.badge.alta{ background:var(--alta) }
+.badge.media{ background:var(--media) }
+.badge.baja{ background:var(--baja) }
+
+.card-actions{
+  display:flex;
+  gap:0.5rem;
+  margin-top:0.5rem
+}
+
+.card-actions button{
+  flex:1;
+  padding:0.4rem;
+  border:1px solid #ccc;
+  border-radius:4px;
+  cursor:pointer
+}
+
+footer{
+  text-align:center;
+  color:#8ba193;
+  font-size:0.75rem;
+  margin-top:2rem
+}
+
+@media (max-width:640px){
+  #card-form{
+    grid-template-columns:1fr
+  }
+}

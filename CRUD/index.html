@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corcho de Estudio · BPDS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="board-header">
+  <p class="eyebrow">BPDS · práctica de Git</p>
+  <h1>Corcho de Estudio</h1>
+</header>
+
+<main>
+  <section class="new-card-slip">
+    <h2>Nueva ficha</h2>
+    <form id="card-form">
+      <div class="field">
+        <label for="materia">Materia</label>
+        <input type="text" id="materia" required>
+      </div>
+      <div class="field">
+        <label for="tema">Tema</label>
+        <input type="text" id="tema" required>
+      </div>
+      <div class="field">
+        <label for="prioridad">Prioridad</label>
+        <select id="prioridad">
+          <option value="alta">Alta</option>
+          <option value="media" selected>Media</option>
+          <option value="baja">Baja</option>
+        </select>
+      </div>
+      <button type="submit" class="pin-button">Clavar ficha</button>
+    </form>
+  </section>
+
+  <section class="board" id="board">
+    <p class="empty-note" id="empty-note">El corcho está vacío.</p>
+  </section>
+</main>
+
+<footer><p>Proyecto BPDS — práctica de Git.</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
